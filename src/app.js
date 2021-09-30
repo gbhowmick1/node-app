@@ -5,7 +5,7 @@ const prediction = require('./utils/prediction')
 const hbs = require('hbs')
 const path = require('path')
 
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 
 app.use(express.json());
@@ -26,7 +26,7 @@ app.use(express.static(publicDirectoryPath))
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Climate Prediction',
-        name: 'Goutam'
+        name: 'Goutam Bhowmick'
     })
 })
  
