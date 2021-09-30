@@ -7,9 +7,6 @@ weatherForm.addEventListener('submit', (e) => {
     e.preventDefault() 
 
     const location = search.value
-    console.log("location")
-    console.log(location)
-
     messageOne.textContent = 'Data Loading...'
     messageTwo.textContent = ''
 
@@ -20,8 +17,7 @@ weatherForm.addEventListener('submit', (e) => {
                 console.log(data.error)
                 messageOne.textContent = data.error
             } else {
-                console.log("data from fetch api")
-                console.log(data)
+
                 messageOne.textContent = ''
                 messageTwo.textContent = data.forecast
             }
